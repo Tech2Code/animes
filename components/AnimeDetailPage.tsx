@@ -76,7 +76,7 @@ export default async function AnimeDetailPage({ anime }: Prop) {
 
           <div className="aspect-video max-w-4xl rounded-xl overflow-hidden border border-neutral-800">
             <iframe
-              src={anime.videos[0].player_url}
+              src={anime.videos[0].player_url.replace("http://", "https://")}
               className="w-full h-full"
               allowFullScreen
             />
